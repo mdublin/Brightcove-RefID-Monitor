@@ -25,6 +25,8 @@ class Video(Base):
     ref_id = Column(String, nullable=False)
     video_id = Column(String, nullable=False)
     start_time = Column(DateTime, default=datetime.utcnow)
+    expired = Column(Boolean, default=False)
+    alert_sent = Column(String, nullable=True)
 
 
 Base.metadata.create_all(engine)
