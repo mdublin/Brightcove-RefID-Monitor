@@ -1,0 +1,6 @@
+{
+"account_id" : “{brightcove pub ID}“,
+"client_secret" : “{your registered app client secret}“,
+"client_id" : “{client id}“
+}
+

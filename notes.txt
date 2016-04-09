@@ -1,0 +1,16 @@
+create postgres db with SQLAlchemy wrapper
+
+db will store all tennis videos (video id, title, and ref id as either None or id)
+
+will keep parsing the feed
+
+when video found, that already exists in db and now has ref id, ref id is added to column and date/time is recorded (HOW DO I DO THIS?)
+
+will keep parsing the feed
+
+(separate script needed to check db for this constantly?):
+
+when video with ref id is 24 hours old, i.e. when a 24 hours period has passed before assignment of ref id and current time, email alert will be sent using builtin in Python email package….
+
+
+
