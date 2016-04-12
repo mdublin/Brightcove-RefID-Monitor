@@ -10,6 +10,7 @@ import datetime
 import oauth_load
 import models
 import notify
+import deactivate
 
 # logging setup
 import logging
@@ -183,6 +184,8 @@ def timer():
                     send_alert = notify.send_email(alert)
                     instance.alert_sent = alert
                     models.session.commit()
+                    # deactivate expired asset in BC
+                    deactivate.deactivate_request(instance.video_id)
 
             else:
                 print("ok, asset was not given ref id over 24 hours ago yet...")
