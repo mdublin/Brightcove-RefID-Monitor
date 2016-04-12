@@ -196,8 +196,7 @@ def timer():
             # separating the string from number separated by , at index 0 (e.g.
             # 'day 1, 20')
             get_hour = re.split(r",", get_hour)
-            if isinstance(get_hour[0], str) == True:
-                print("delete")
-
+            if isinstance(get_hour[0], str) == True and instance.alert_sent == None:
+                print("WARNING: this asset has been given a refID over 24 hours ago (i.e. it has either 'Day 1' or older appended to the time diff string) and no alert was sent or exists in the db. Please check the db for this asset and make sure it is unpublished from your CMS")
 
 timeit = timer()
