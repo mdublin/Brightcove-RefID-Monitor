@@ -185,7 +185,8 @@ def timer():
                     instance.alert_sent = alert
                     models.session.commit()
                     # deactivate expired asset in BC
-                    deactivate.deactivate_request(instance.video_id)
+                    bc_video_id = instance.video_id
+                    deactivate.deactivate_request(bc_video_id)
 
             else:
                 print("ok, asset was not given ref id over 24 hours ago yet...")
