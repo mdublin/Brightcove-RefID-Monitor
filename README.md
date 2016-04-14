@@ -1,3 +1,13 @@
+
+Setup as cron job on CentOS:
+
+    Example to send log via email:
+        
+        `*/30 * * * * /home/local/username/Brightcove-refID-Monitor/main.py | tee /home/local/username/Brightcove-refID-Monitor/Logdirectory/RefID`date +\%Y-\%m-\%d-\%H:\%M:\%S`-cron.log | mailx -s "Email Subject Header" recipient@recipientemail.com`
+
+
+
+
 For sending emails from localhost (tested on Yosimite Mac OSX 10.10.5):
 
 Step 1. Edit Postfix config file:
