@@ -3,8 +3,7 @@ Setup as cron job on CentOS:
 
 (Example to send log via email)
         
-        `*/30 * * * * /home/local/username/Brightcove-refID-Monitor/main.py | tee /home/local/username/Brightcove-refID-Monitor/Logdirectory/RefID`date +\%Y-\%m-\%d-\%H:\%M:\%S`-cron.log | mailx -s "Email Subject Header" recipient@recipientemail.com`
-
+        */30 * * * * /home/local/username/Brightcove-refID-Monitor/main.py | tee /home/local/username/Brightcove-refID-Monitor/Logdirectory/RefID`date +\%Y-\%m-\%d-\%H:\%M:\%S`-cron.log | mailx -s "Email Subject Header" recipient@recipientemail.com
 
 
 
