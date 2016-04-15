@@ -5,7 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 import datetime
 
 
-engine = create_engine('postgresql://username:password@localhost:5432/BC_refID')
+engine = create_engine(
+    'postgresql://username:password@localhost:5432/BC_refID')
 Session = sessionmaker(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -16,9 +17,10 @@ from datetime import datetime
 
 from sqlalchemy import Column, Integer, String, DateTime
 
+
 class Video(Base):
     __tablename__ = "videos"
-    
+
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     #description = Column(String)
@@ -30,4 +32,3 @@ class Video(Base):
 
 
 Base.metadata.create_all(engine)
-
